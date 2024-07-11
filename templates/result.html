@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>MeetNotes Pro | Result</title>
+    <style>
+        .varela-round-regular {
+            font-family: "Varela Round", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .logo {
+            font-size: 28px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        .new-nav {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            overflow: hidden;
+            /* background-color: #0a1a32; */
+            background: linear-gradient(to right, rgb(93 20 185), rgb(229 77 78));
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container h1{
+            color: white;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 40px;
+            background: linear-gradient(to right, rgb(93 20 185), rgb(229 77 78));
+            color: white;
+        }
+
+        .box {
+            flex: 1;
+            padding: 10px;
+            border: 5px solid #111;
+            border-radius: 5px;
+            margin: 0px 40px 0px 40px;
+            color: white;
+        }
+
+        .heading {
+            font-size: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 16px;
+        }
+
+        .mom{
+            text-align: right;
+            background-color: #0a1a32;
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: -64px;
+        }
+
+        .mom p{
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .mom a{
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .new-nav a{
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        .mom p:hover{
+            color: #0557af;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(to right, rgb(93 20 185), rgb(229 77 78));">
+    <!-- NAVBAR START -->
+    <div class="new-nav">
+        <a class="navbar-brand" href="/">
+            <div class="logo varela-round-regular">
+                <p>MeetNotes Pro</p>
+            </div>
+        </a>
+        <a href="/transcribe-summarize/MOM">
+            <div class="mom varela-round-regular">
+                <p>Create Minutes of Meeting &raquo;</p>
+            </div>
+        </a>
+    </div>
+    <!-- NAVBAR END -->
+
+    <!-- <div class="container">
+        <h1>Transcription Result</h1>
+        <div class="boxes">
+            <div class="box">
+                <div class="heading">Transcribed Text</div>
+                <div class="content">{{ transcribed_text }}</div>
+            </div>
+            <div class="box">
+                <div class="heading">Summarized Text</div>
+                <div class="content">{{ summarized_text }}</div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <h1>Transcription Result</h1>
+        <div class="boxes">
+            <div class="box">
+                <div class="heading">Transcribed Text</div>
+                <div class="content">{{ transcribed_text if transcribed_text else 'No transcribed text available.' }}</div>
+            </div>
+            <div class="box">
+                <div class="heading">Summarized Text</div>
+                <div class="content">{{ summarized_text if summarized_text else 'No summarized text available.' }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

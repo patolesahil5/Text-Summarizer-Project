@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOM</title>
+    <style>
+        .varela-round-regular {
+            font-family: "Varela Round", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .logo {
+            font-size: 28px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        .new-nav {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            overflow: hidden;
+            background-color: #0a1a32;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 10px;
+            border: 5px solid #111;
+            border-radius: 5px;
+            margin: 0px 40px 0px 40px;
+        }
+
+        .heading {
+            font-size: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 16px;
+        }
+
+        .mom {
+            text-align: right;
+            background-color: #0a1a32;
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: -64px;
+        }
+
+        .mom p {
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .mom a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .new-nav a {
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        .mom p:hover {
+            color: #0557af;
+        }
+
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        /* CSS for the text area */
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-top: 10px;
+        }
+        .unordered-list li{
+            font-size: 24px;
+            text-align: left;
+        }
+        .container ul{
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="new-nav">
+        <a class="navbar-brand" href="/">
+            <div class="logo varela-round-regular">
+                <p>MeetNotes Pro</p>
+            </div>
+        </a>
+    </div>
+    <div class="container">
+        <h1>Minutes of Meeting</h1>
+        <ul class="unordered-list">
+            <li class="list-items"><strong>Name:</strong> {{ firstname }}</li>
+            <li class="list-items"><strong>Organized by:</strong> {{ organizer }}</li>
+            <li class="list-items"><strong>Topic Name:</strong> {{ topic }}</li>
+            <li class="list-items"><strong>Date:</strong> {{ date }}</li>
+            <li class="list-items"><strong>Number of Attendees:</strong> {{ attendees }}</li>
+            <li class="list-items"><strong>Subject:</strong> {{ subject }}</li>
+        </ul>
+    </div>
+    
+</body>
+
+</html>
